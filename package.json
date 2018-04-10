@@ -1,9 +1,9 @@
 {
-    "name": "text-identifier",
-    "displayName": "Mycode-snnipets",
-    "description": "test-description",
-    "version": "3.0.0",
-    "publisher": "gajeshpanigrahi",
+    "name": "React-JS-snnipets",
+    "displayName": "JS Snnipets",
+    "description": "Javascript, bootstarp, ES6, typescript-react, react, react-router code snippet.",
+    "version": "3.0.3",
+    "publisher": "Gajesh1",
     "engines": {
         "vscode": "^1.18.0"
     },
@@ -22,11 +22,15 @@
             },
             {
                 "language": "javascript",
-                "path": "./snippets/typescript.json"
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "react",
+                "path": "./snippets/javascript.json"
             },
             {
                 "language": "html",
-                "path": "./snippets/typescript.json"
+                "path": "./snippets/javascript.json"
             }
         ]
     }
