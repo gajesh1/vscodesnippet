@@ -135,7 +135,7 @@
     },
 
     "constant": {
-        "prefix": "const",
+        "prefix": "cnt",
         "body": [
             "const $1 = {",
             "\t$2",
@@ -146,21 +146,21 @@
 	"Push path": {
 		"prefix": "rpush",
         "body": [
-            "this.props.history.push(/$1)"
+            "this.props.history.push('/$1')"
         ]
 	},
 
 	"Match path": {
 		"prefix": "rmatch",
         "body": [
-            "this.props.match.data(/$1)"
+            "this.props.match.data[`$1`]"
         ]
 	},
 
 	"Map function": {
 		"prefix": "map",
 		"body": [
-			"\n$1.map(($2, index) => {\n",
+			"\n$1.map(($2, index) => {",
 			"\t$3\n});\n"
         ]
 	},
@@ -168,14 +168,14 @@
 	"prevent default": {
 		"prefix": "pd",
 		"body": [
-			"$1.preventDefault()"
+			"$1.preventDefault();"
         ]
 	},
 
 	"handle input": {
-		"prefix": "handle",
+		"prefix": "this",
 		"body": [
-			"$1 = ($2) => {\n",
+			"$1 = ($2) => {",
 			"\t$3",
 			"}\n"
         ]
@@ -184,7 +184,7 @@
 	"dopost": {
 		"prefix": "post",
 		"body": [
-			"doPost(\n",
+			"doPost(",
 			"\t'$1',\n\t$2,\n\t$3,\n\t$4\n)"
 		]
 	},
@@ -192,8 +192,14 @@
 	"doget": {
 		"prefix": "get",
 		"body": [
-			"doGet(\n",
+			"doGet(",
 			"\t'$1',\n\t$3,\n\t$4\n)"
+		]
+	},
+	"import": {
+		"prefix": "imst",
+		"body": [
+			"import {$1} from '$2'"
 		]
 	}
 
