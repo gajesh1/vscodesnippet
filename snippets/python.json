@@ -1,0 +1,29 @@
+{
+    "ires": {
+        "prefix": "ires",
+        "body": "from django.http import HttpResponse",
+        "description": "imort"
+    },
+
+    "endp": {
+        "prefix": "endp",
+        "body": [
+            "@csrf_exempt",
+            "def $1(request):",
+            "\ttry:",
+            "\t\ttoken = request.POST.get('storage_hex')",
+            "\t\tif token is not None:",
+            "\t\t\tsessionData = decode_token(token)",
+            "\t\t\tlabId = sessionData.get('labId')",
+            "\t\t\tif labId is not None:",
+            "\t\t\t\t$2",
+            "\t\t\telse:",
+            "\t\t\t\treturn HttpResponse('logout/')",
+            "\t\treturn HttpResponse('logout/')",
+            "\texcept:",
+            "\t\tclient.captureException()",
+            "\t\treturn HttpResponse(status=400)"
+        ],
+        "description": "imort"
+    }
+}

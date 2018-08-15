@@ -2,7 +2,7 @@
     "name": "React-JS-Snippet",
     "displayName": "JS Snippet",
     "description": "Javascript, typescript, bootstrap, ES6, typescript-react, react, react-router code snippet.",
-    "version": "3.0.53",
+    "version": "3.0.54",
     "publisher": "Gajesh1",
     "engines": {
         "vscode": "^1.18.0"
@@ -31,6 +31,10 @@
             {
                 "language": "html",
                 "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "python",
+                "path": "./snippets/python.json"
             }
         ]
     }

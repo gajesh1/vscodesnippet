@@ -2,7 +2,7 @@
     "Print to console": {
 		"prefix": "log",
 		"body": [
-			"console.log(`$1`, $1);"
+			"console.log(`$1`);"
 		],
 		"description": "Log output to console"
 	},
@@ -15,9 +15,9 @@
 		],
 		"description": "HTML - Defines a section in a document"
 	},
-	"button": {
-		"prefix": "button",
-		"body": "<button type=\"$1\">$2</button>$3",
+	"btn": {
+		"prefix": "btn",
+		"body": "<Button onClick=\"$1\">$2</Button>$3",
 		"description": "HTML - Defines a push button"
 	},
 	"Col": {
@@ -40,7 +40,7 @@
 	},
 	"label": {
 		"prefix": "label",
-		"body": "<label for=\"$1\">$2</label>",
+		"body": "<Label>$2</Label>",
 		"description": "HTML - Defines an inline window"
 	},
 	"p": {
@@ -86,6 +86,10 @@
 		"prefix": "rr",
 		"body": "import {$1} from 'react-router';"
 	},
+	"import anything": {
+		"prefix": "impt",
+		"body": "import {$2} from '$1';"
+	},
 	"Class": {
 		"prefix": "jsclass",
 		"body": [
@@ -129,7 +133,7 @@
         "prefix": "method",
         "body": [
             "const $1 = ($2) => {",
-            "\t$2",
+            "\t$3",
             "}"
         ]
     },
@@ -142,7 +146,7 @@
             "};"
         ]
 	},
-	
+
 	"Push path": {
 		"prefix": "rpush",
         "body": [
@@ -197,11 +201,69 @@
 		]
 	},
 	"import": {
-		"prefix": "imst",
+		"prefix": "imt",
 		"body": [
 			"import {$1} from '$2'"
 		]
+	},
+	"Filter": {
+		"prefix": "fil",
+		"body": [
+			"$1.filter(($2) => $3)"
+		]
+	},
+	"splice": {
+		"prefix": "spl",
+		"body": [
+			"$1.splice($2)"
+		]
+	},
+	"slice": {
+		"prefix": "slc",
+		"body": [
+			"$1.slice($2)"
+		]
+	},
+	"state": {
+		"prefix": "st",
+		"body": [
+			"state = {$1}"
+		]
+	},
+	"default Props": {
+		"prefix": "dp",
+		"body": [
+			"static defaultProps = {$1}"
+		]
+	},
+	"event": {
+		"prefix": "evt",
+		"body": [
+			"(e) => {$1}"
+		]
+	},
+	"this.props": {
+		"prefix": "tp",
+		"body": [
+			"this.props($1)"
+		]
+	},
+	"this.state": {
+		"prefix": "ts",
+		"body": [
+			"this.state($1)"
+		]
+	},
+	"style": {
+		"prefix": "sty",
+		"body": [
+			"style={{$1}}"
+		]
+	},
+	"className": {
+		"prefix": "cn",
+		"body": [
+			"className=$1"
+		]
 	}
-
-
 }
